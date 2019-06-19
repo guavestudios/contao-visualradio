@@ -3,8 +3,9 @@
 namespace Guave\VisualRadio;
 
 use Contao\Widget;
+use Image;
 
-class WidgetVisualRadio extends Widget {
+class VisualradioWidget extends Widget {
 
 	/**
 	 * Template
@@ -32,7 +33,7 @@ class WidgetVisualRadio extends Widget {
 			$html .= '<div style="width:25%;display: inline-block;text-align:center;margin-bottom:20px;">';
 			$html .= '<input type="radio" id="'.$id.'" name="'.$this->strName.'" value="'.$option['value'].'" '.( $active?'checked':'' ).' /> ';
 			$html .= '<label for="'.$id.'">';
-			$html .= \Image::getHtml($image, $option['name'], 'title="'.specialchars($option['name']).'"');
+			$html .= Image::getHtml($image, $option['name'], 'title="'.specialchars($option['name']).'"');
 			$html .= '</label>';
 			$html .= '</div>';
 		}
