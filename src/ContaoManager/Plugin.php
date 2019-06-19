@@ -3,10 +3,11 @@
 namespace Guave\Visualradio\ContaoManager;
 
 use Contao\CoreBundle\ContaoCoreBundle;
+use Contao\ManagerBundle\ContaoManagerBundle;
 use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
 use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
 use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
-use Guave\Visualradio\VisualradioBundle;
+use Guave\Visualradio\GuaveVisualradioBundle;
 
 class Plugin implements BundlePluginInterface
 {
@@ -16,8 +17,9 @@ class Plugin implements BundlePluginInterface
     public function getBundles(ParserInterface $parser): array
     {
         return [
-            BundleConfig::create(VisualradioBundle::class)
-                ->setLoadAfter([ContaoCoreBundle::class])
+            BundleConfig::create(GuaveVisualradioBundle::class)
+                ->setLoadAfter([ContaoCoreBundle::class, ContaoManagerBundle::class])
+                ->setReplace(['visualradio'])
         ];
     }
 }

@@ -5,7 +5,7 @@ namespace Guave\Visualradio;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class VisualradioBundle extends Bundle
+class GuaveVisualradioBundle extends Bundle
 {
 
 }

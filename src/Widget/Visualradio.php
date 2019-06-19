@@ -1,12 +1,13 @@
 <?php
 
-namespace Guave\VisualRadio;
+namespace Guave\Visualradio\Widget;
 
+use Contao\Database\Result;
 use Contao\Widget;
-use Image;
+use Contao\Image;
 
-class VisualradioWidget extends Widget {
-
+class Visualradio extends Widget {
+    
 	/**
 	 * Template
 	 * @var string
@@ -21,8 +22,11 @@ class VisualradioWidget extends Widget {
 		return $varInput;
 	}
 
-	public function generate()
+    public function generate()
 	{
+//	    var_dump('visualradio');die();
+	    
+	    /** @var Result $activeRecord */
 		$activeRecord = $this->activeRecord;
 
 		$html = '<div>';

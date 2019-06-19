@@ -1,3 +1,3 @@
 <?php
 
-$GLOBALS['BE_FFL']['visualradio'] = '\Guave\Widget\VisualradioWidget';
+$GLOBALS['BE_FFL']['visualradio'] = '\Guave\Visualradio\Widget\Visualradio';
